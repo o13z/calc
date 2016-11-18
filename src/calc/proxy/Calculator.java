@@ -1,8 +1,5 @@
 package calc.proxy;
 
-/**
- * Created by User on 017 17.11.16.
- */
 public class Calculator implements CalculatorInterface {
 
     @Override

@@ -9,10 +9,10 @@ public class TestCaclProxy {
     @Test
     public void testCalculations() {
         CalculatorProxy calc = new CalculatorProxy();
-        System.out.println("3 + 4 = " + calc.add(3, 4));
-        System.out.println("3 - 4 = " + calc.sub(3, 4));
-        System.out.println("3 * 4 = " + calc.mult(3, 4));
-        System.out.println("3 / 4 = " + calc.div(3, 4));
+        System.out.println(calc.add(3, 4));
+        System.out.println(calc.sub(3, 4));
+        System.out.println(calc.mult(3, 4));
+        System.out.println(calc.div(3, 4));
     }
 
 }
