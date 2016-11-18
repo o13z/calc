@@ -1,16 +1,18 @@
 package calc.observer;
 
+import calc.proxy.CalculatorImpl;
 import calc.proxy.CalculatorProxy;
+import calc.proxy.ICalculator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculationManager implements CalculationObservable {
 	private List<EventHandler> observers;
-	private CalculatorProxy calc;
+	private ICalculator calc;
 
 	public CalculationManager() {
-		calc = new CalculatorProxy();
+		calc = new CalculatorProxy(new CalculatorImpl());
 		observers = new ArrayList();
 		loadListners();
 	}

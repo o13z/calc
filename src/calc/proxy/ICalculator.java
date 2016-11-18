@@ -1,6 +1,6 @@
 package calc.proxy;
 
-public interface CalculatorInterface {
+public interface ICalculator {
 
     double add(double x, double y);
 

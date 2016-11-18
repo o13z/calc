@@ -1,6 +1,6 @@
 package calc.proxy;
 
-public class Calculator implements CalculatorInterface {
+public class CalculatorImpl implements ICalculator {
 
     @Override
     public double add(double x, double y) {

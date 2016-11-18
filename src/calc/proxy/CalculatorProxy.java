@@ -1,10 +1,10 @@
 package calc.proxy;
 
-public class CalculatorProxy implements CalculatorInterface {
-    private Calculator calc;
+public class CalculatorProxy implements ICalculator {
+    private ICalculator calc;
 
-    public CalculatorProxy() {
-        calc = new Calculator();
+    public CalculatorProxy(ICalculator calc) {
+        this.calc = calc;
     }
 
     @Override
