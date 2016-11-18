@@ -8,7 +8,8 @@ import org.junit.Test;
 public class TestCaclProxy {
     @Test
     public void testCalculations() {
-        CalculatorProxy calc = new CalculatorProxy();
+        Calculator calc = new Calculator();
+//        CalculatorProxy calc = new CalculatorProxy();
         System.out.println(calc.add(3, 4));
         System.out.println(calc.sub(3, 4));
         System.out.println(calc.mult(3, 4));
