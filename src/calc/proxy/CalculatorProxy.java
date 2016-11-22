@@ -3,6 +3,7 @@ package calc.proxy;
 import calc.observer.CalculationObservable;
 import calc.observer.EventHandler;
 import calc.observer.MathOperationObserver;
+import calc.observer.MathOperationsCounter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,32 +22,33 @@ public class CalculatorProxy implements ICalculator, CalculationObservable {
 
     private void loadListners(){
         addObserver(new MathOperationObserver());
+        addObserver(new MathOperationsCounter());
     }
 
     @Override
     public double add(double x, double y) {
-        mathObs.handleEvent("add");
+        notifyAllObservers("add");
         System.out.print(x + " + " + y + " = ");
         return calc.add(x, y);
     }
 
     @Override
     public double sub(double x, double y) {
-        mathObs.handleEvent("sub");
+        notifyAllObservers("sub");
         System.out.print(x + " - " + y + " = ");
         return calc.sub(x, y);
     }
 
     @Override
     public double mult(double x, double y) {
-        mathObs.handleEvent("mult");
+        notifyAllObservers("mult");
         System.out.print(x + " x " + y + " = ");
         return calc.mult(x, y);
     }
 
     @Override
     public double div(double x, double y) {
-        mathObs.handleEvent("div");
+        notifyAllObservers("div");
         System.out.print(x + " / " + y + " = ");
         return calc.div(x, y);
     }
