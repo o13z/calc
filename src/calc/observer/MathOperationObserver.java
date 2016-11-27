@@ -7,10 +7,10 @@ public class MathOperationObserver implements EventHandler {
 
     private static Map<String, String> mathOper = new HashMap<>();
     static {
-        mathOper.put("mult", "multiply");
-        mathOper.put("div", "divide");
+        mathOper.put("mult", "multiplication");
+        mathOper.put("div", "division");
         mathOper.put("sub", "subtraction");
-        mathOper.put("add", "sum");
+        mathOper.put("add", "addtition");
     }
 
     @Override

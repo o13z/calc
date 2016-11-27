@@ -1,32 +1,34 @@
 package calc.observer;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MathOperationsCounter implements EventHandler {
-    private Map<String, Integer> counted;
+
+    private List<String> operationsType;
+    private static int numberOfOperations = 0;
 
     public MathOperationsCounter() {
-        init();
+        initOperaionsList();
     }
 
-    private void init() {
-        counted = new HashMap<>();
-        counted.put("mult", 0);
-        counted.put("div", 0);
-        counted.put("sub", 0);
-        counted.put("add", 0);
+    private void initOperaionsList() {
+        operationsType = new ArrayList();
+        operationsType.addAll(Arrays.asList("mult", "div", "sub", "add"));
     }
 
+    public static int getNumberOfOperations() {
+        return numberOfOperations;
+    }
     @Override
     public void handleEvent(String operation) {
-        int i = counted.get(operation);
-        i++;
-        counted.put(operation, i);
-        for (int oper : counted.values()) {
-            System.out.println(oper);
+        if(operationsType.contains(operation)) {
+            numberOfOperations++;
+        } else try {
+            throw new Exception("Unknown operation type");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    }
 
+    }
 
 }
