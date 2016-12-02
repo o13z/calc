@@ -2,27 +2,27 @@ package calc.proxy;
 
 import calc.observer.CalculationObservable;
 import calc.observer.EventHandler;
-import calc.observer.MathOperationObserver;
-import calc.observer.MathOperationsCounter;
+import calc.observer.MathOperationTypePrintObserver;
+import calc.observer.MathOperationsTypeCounterCounter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculatorProxy implements ICalculator, CalculationObservable {
     private ICalculator calc;
-    private MathOperationObserver mathObs;
+    private MathOperationTypePrintObserver mathObs;
     private List<EventHandler> observers;
 
     public CalculatorProxy(ICalculator calc) {
         this.calc = calc;
-        mathObs = new MathOperationObserver();
+        mathObs = new MathOperationTypePrintObserver();
         observers = new ArrayList();
         loadListners();
     }
 
     private void loadListners(){
-        addObserver(new MathOperationObserver());
-        addObserver(new MathOperationsCounter());
+        addObserver(new MathOperationTypePrintObserver());
+        addObserver(new MathOperationsTypeCounterCounter());
     }
 
     @Override

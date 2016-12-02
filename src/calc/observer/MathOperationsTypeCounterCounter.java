@@ -2,12 +2,12 @@ package calc.observer;
 
 import java.util.*;
 
-public class MathOperationsCounter implements EventHandler {
+public class MathOperationsTypeCounterCounter implements EventHandler {
 
     private List<String> operationsType;
     private static int numberOfOperations = 0;
 
-    public MathOperationsCounter() {
+    public MathOperationsTypeCounterCounter() {
         initOperaionsList();
     }
 

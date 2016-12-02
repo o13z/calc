@@ -1,6 +1,6 @@
 package calc.proxy;
 
-import calc.observer.MathOperationsCounter;
+import calc.observer.MathOperationsTypeCounterCounter;
 import org.junit.Test;
 
 public class TestCaclProxy {
@@ -14,7 +14,7 @@ public class TestCaclProxy {
         System.out.println(calc.div(3, 4)); //division
 
         System.out.println("----------------------------------------------");
-        System.out.println("The total number of mathematical operations is " + MathOperationsCounter.getNumberOfOperations());
+        System.out.println("The total number of mathematical operations is " + MathOperationsTypeCounterCounter.getNumberOfOperations());
     }
 
 }
