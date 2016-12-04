@@ -1,4 +1,4 @@
-package calc.proxy;
+package calc;
 
 public class CalculatorImpl implements ICalculator {
 

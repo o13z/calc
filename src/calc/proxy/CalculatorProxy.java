@@ -1,5 +1,6 @@
 package calc.proxy;
 
+import calc.ICalculator;
 import calc.observer.CalculationObservable;
 import calc.observer.EventHandler;
 import calc.observer.MathOperationTypePrintObserver;

@@ -13,7 +13,7 @@ public class MathOperationsTypeCounterCounter implements EventHandler {
 
     private void initOperaionsList() {
         operationsType = new ArrayList();
-        operationsType.addAll(Arrays.asList("mult", "div", "sub", "add"));
+        operationsType.addAll(Arrays.asList("mult", "div", "sub", "add", "pow", "ext"));
     }
 
     public static int getNumberOfOperations() {
