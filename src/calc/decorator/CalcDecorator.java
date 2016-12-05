@@ -31,8 +31,8 @@ public abstract class CalcDecorator implements ICalculator {
 
 	public double inPower(double x, int n) {
 		double rez = x;
-		for (int i = 1; i <= n; i++) {
-			rez = rez * i;
+		for (int i = 2; i <= n; i++) {
+			rez = mult(rez, x);
 		}
 		return rez;
 	}

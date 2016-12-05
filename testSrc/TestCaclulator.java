@@ -21,7 +21,8 @@ public class TestCaclulator {
     @Test
     public void testWithPoweringAndExtraction() {
         double x = 9; double y = 3; int n = 3;
-        CalcWithPoweringAndExtraction calc = new CalcWithPoweringAndExtraction(new CalculatorProxy(new CalculatorImpl()));
+        CalcWithPoweringAndExtraction calc = new CalcWithPoweringAndExtraction(new CalculatorImpl());
+        System.out.println(calc.add(calc.mult(x, y), y));
         System.out.println(calc.add(x, y)); //addition
         System.out.println(calc.sub(x, y)); //subtraction
         System.out.println(calc.mult(x, y)); //multiplication
@@ -31,8 +32,6 @@ public class TestCaclulator {
         System.out.println("----------------------------------------------");
         System.out.println(calc.extraction(x));
         System.out.println(calc.extraction(y));
-        System.out.println("----------------------------------------------");
-        System.out.println("The total number of mathematical operations is " + MathOperationsTypeCounterCounter.getNumberOfOperations());
 
     }
 
