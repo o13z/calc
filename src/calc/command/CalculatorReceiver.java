@@ -21,28 +21,6 @@ public class CalculatorReceiver {
         }
     }
 
-//    public double doOperation(char operation, int x, int y) {
-//        double rezult = 0;
-//        switch (operation) {
-//            case '+':
-//                rezult = add(x, y);
-//                break;
-//            case '-':
-//                rezult = sub(x, y);
-//                break;
-//            case  '*':
-//                rezult = mult(x, y);
-//                break;
-//            case '/':
-//                rezult = div(x, y);
-//                break;
-//            default:
-//                System.out.println("Invalid operation");
-//                break;
-//        }
-//        return rezult;
-//    }
-
     private void add(double x, double y) {
         rez = x+y;
         System.out.println(x + " + " + y + " = " + rez);
