@@ -1,19 +1,21 @@
 package calc.abstractFactory;
 
-public class CalcFactoryImpl {
-    public AdditionOperation createAdd() {
-        return new AdditionOperation();
-    }
+public class CalcFactoryImpl extends CalcFactory{
 
-    public SubtractionOperation createSub() {
-        return new SubtractionOperation();
-    }
-
-    public MultiplyOperation createMult() {
-        return new MultiplyOperation();
-    }
-
-    public DivisionOperation createDiv() {
-        return new DivisionOperation();
+    @Override
+    public IMathAction operation(char operation) {
+        if (operation == '+') {
+            return new AdditionOperation();
+        }
+        if (operation == '-') {
+            return new SubtractionOperation();
+        }
+        if (operation == '*' || operation == 'x') {
+            return new MultiplyOperation();
+        }
+        if (operation == '/') {
+            return new DivisionOperation();
+        }
+        return null;
     }
 }
