@@ -2,7 +2,7 @@ import calc.abstractFactory.CalcFactoryImpl;
 import calc.abstractFactory.IMathAction;
 import org.junit.Test;
 
-public class TestFactory{
+public class TestAbstractFactory {
     @Test
     public void testFactoryCalc() {
         CalcFactoryImpl factory = new CalcFactoryImpl();
