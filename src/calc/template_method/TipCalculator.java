@@ -8,22 +8,22 @@ public class TipCalculator extends ACalculator{
     private int a;
     private double rez;
 
-    public TipCalculator (int a) {
-        this.a = a;
+    public TipCalculator (int total) {
+        this.a = total;
     }
 
     @Override
-    void initCalculator() {
+    protected void initCalculator() {
         calc = new CalculatorImpl();
     }
 
     @Override
-    void calculate() {
+    protected void calculate() {
         rez = (a > 100) ? a/20 : a/10;
     }
 
     @Override
     protected void printResult() {
-        System.out.println("It's recommended to leave a tip ~ " + rez + "$");
+        System.out.println("For the Total of "+ a + "$ it's recommended to leave a tip ~ " + rez + "$");
     }
 }

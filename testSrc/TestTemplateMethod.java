@@ -12,7 +12,7 @@ public class TestTemplateMethod {
 
     @Test
     public void tipCalcTest() {
-        TipCalculator calc = new TipCalculator(155);
+        TipCalculator calc = new TipCalculator(25);
         calc.goCalc();
     }
 }

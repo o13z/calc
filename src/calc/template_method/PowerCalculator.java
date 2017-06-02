@@ -8,18 +8,18 @@ public class PowerCalculator extends ACalculator {
     private double rez;
     private int a, b;
 
-    public PowerCalculator (int a, int b) {
-        this.a = a;
-        this.b = b;
+    public PowerCalculator (int number, int power) {
+        this.a = number;
+        this.b = power;
     }
 
     @Override
-    void initCalculator() {
+    protected void initCalculator() {
         calc = new CalculatorImpl();
     }
 
     @Override
-    void calculate() {
+    protected void calculate() {
         rez = a;
         for(int i = 1; i <= b; i++) {
             rez = calc.mult(rez, i);

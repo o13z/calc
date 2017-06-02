@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Composite implements IComponent {
+	private List<IComponent> allCalculatorsContainer = new ArrayList<>();
     private List<ICalculator> simpleList = new ArrayList<>();
     private List<ICalculator> engeeList = new ArrayList<>();
 
@@ -25,7 +26,7 @@ public class Composite implements IComponent {
     }
 
     @Override
-    public ICalculator getIng() {
+    public ICalculator getEngee() {
         return engeeList.get(0);
     }
 
@@ -43,5 +44,13 @@ public class Composite implements IComponent {
 
     public int getNumEngeeCalc() {
         return engeeList.size();
+    }
+
+    public void addComponent(IComponent aComponent) {
+    	allCalculatorsContainer.add(aComponent);
+    }
+
+    public IComponent getComponent() {
+    	return allCalculatorsContainer.get(0);
     }
 }

@@ -6,5 +6,5 @@ public interface IComponent {
     void addSimpleCalc(ICalculator c);
     void addEngeneerCalc(ICalculator c);
     ICalculator getSimple();
-    ICalculator getIng();
+    ICalculator getEngee();
 }

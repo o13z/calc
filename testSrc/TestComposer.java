@@ -16,7 +16,7 @@ public class TestComposer {
         composite.addEngeneerCalc(engee);
 
         System.out.println(composite.getSimple().add(55, 22));
-        System.out.println(((CalcWithPoweringAndExtraction) composite.getIng()).inPower(2, 4));
+        System.out.println(((CalcWithPoweringAndExtraction) composite.getEngee()).inPower(2, 4));
 
         System.out.println("=======================================");
         composite.addSimpleCalc(simple);
@@ -25,6 +25,12 @@ public class TestComposer {
 
         System.out.println("number of simple calc: " + composite.getNumSimpleCalc());
         System.out.println("number of engineering calc: " + composite.getNumEngeeCalc());
+
+	    System.out.println("=======================================");
+	    Composite newContainer = new Composite();
+	    newContainer.addComponent(composite);
+	    System.out.println(
+	            newContainer.getComponent().getSimple().add(2, 4));
     }
 
 }
